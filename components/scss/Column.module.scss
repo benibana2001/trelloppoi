@@ -1,0 +1,56 @@
+@use "./variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  width: variables.$size-column;
+  flex: 0 0 320px;
+  margin: 8px;
+  background-color: #dddddd;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: variables.$color-font-blue;
+  > * + * {
+    margin-top: 6px;
+  }
+
+  > div > * + * {
+    margin-top: 6px;
+  }
+
+  .handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    border-radius: 2px;
+    &__line {
+      width: 90%;
+      height: 5px;
+      background-color: #bebebe;
+      border-radius: 3px;
+    }
+  }
+  .title_p {
+    position: absolute;
+  }
+
+  .title {
+    width: 100%;
+    padding: 0 8px;
+    background-color: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1C1B35;
+    resize: none;
+    border: none;
+  }
+
+  .ticket_list {
+    padding: 8px;
+    flex: 1;
+  }
+
+  .add_ticket {
+    background-color: #bebebe;
+  }
+}
