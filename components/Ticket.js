@@ -50,7 +50,7 @@ export default function Ticket({ ticket, index, onClickPlusMinus }) {
                     onClickPlusMinus(ticket, { consume: ticket.consume - 1 })
                   }
                 >
-                  <Image src={imgMinus} />
+                  <Image src={imgMinus} alt={"minus"} />
                 </div>
               </div>
               <div className={styles.time}>
@@ -60,7 +60,7 @@ export default function Ticket({ ticket, index, onClickPlusMinus }) {
                     onClickPlusMinus(ticket, { estimate: ticket.estimate + 1 })
                   }
                 >
-                  <Image src={imgPlus} />
+                  <Image src={imgPlus} alt={"plus"} />
                 </div>
                 <div className={`${styles.hours} ${styles.hours__estimate}`}>
                   {ticket.estimate}
@@ -71,7 +71,7 @@ export default function Ticket({ ticket, index, onClickPlusMinus }) {
                     onClickPlusMinus(ticket, { estimate: ticket.estimate - 1 })
                   }
                 >
-                  <Image src={imgMinus} />
+                  <Image src={imgMinus} alt={"minus"} />
                 </div>
               </div>
             </div>

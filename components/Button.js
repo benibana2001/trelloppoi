@@ -1,5 +1,5 @@
 import styles from "./scss/Button.module.scss";
-export default function ({ text, color, backgroundColor, ...props }) {
+export default function Button({ text, color, backgroundColor, ...props }) {
   const style = {
     color: color || "#ffffff",
     backgroundColor: backgroundColor || "#45a445",
