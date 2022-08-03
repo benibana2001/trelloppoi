@@ -5,7 +5,7 @@ import Layout, { siteTitle } from "../components/Layout";
 import Column from "../components/Column";
 import ColumnComposer from "../components/ColumnComposer";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { initialData } from "./initail-data";
+import { initialData } from "../lib/initail-data";
 
 export default function Home() {
   const [state, setState] = useState(initialData);
