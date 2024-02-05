@@ -173,7 +173,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles.reel}`}>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable
             droppableId="all-columns"

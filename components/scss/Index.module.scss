@@ -1,9 +1,38 @@
 .container {
-  display: flex;
-  flex-direction: row;
   align-items: flex-start;
+  background-color: rgb(225, 255, 255);
 }
 .column_container {
   display: flex;
   align-items: flex-start;
+}
+.reel {
+  --color-light: white;
+  --color-dark: black;
+
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+
+  scrollbar-width: 1rem;
+}
+
+.reel::-webkit-scrollbar {
+  height: 0.5em;
+}
+
+.reel::-webkit-scrollbar-track {
+  background-color: var(--color-light);
+}
+
+.reel::-webkit-scrollbar-thumb {
+  border-radius: 0.4em;
+  background-color: var(--color-dark);
+  background-image: linear-gradient(
+    var(--color-dark) 0,
+    var(--color-dark) 0.25,
+    var(--color-light) 0.25,
+    var(--color-light) 0.25,
+    var(--color-dark) 0.75,
+  );
 }

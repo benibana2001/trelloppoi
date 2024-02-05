@@ -1,0 +1,74 @@
+
+
+.container {
+  overflow: scroll;
+  min-height: 100vh;
+}
+
+.withSidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  background-color: gray;
+  flex-grow: 1;
+}
+
+.notSidebar {
+  min-width: 70%;
+  flex-grow: 999;
+}
+
+.header {
+  padding: 0.2rem 1rem;
+  background-color: var(--headerBGColor);
+  filter: drop-shadow(0.1rem 0.1rem var(--headerTextColor));
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.header h1 span {
+  font-size: 0.4em;
+  font-weight: 100;
+}
+
+.header > :first-child {
+  // margin-right: auto;
+  // padding: 1rem;
+}
+
+.hamburger {
+}
+
+.backToHome {}
+.header > :first-child {
+  // margin-right: auto;
+  // padding: 1rem;
+}
+
+.hamburger {
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+.container [class*='cluster'] {
+  --space: 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space);
+  justify-content: space-between;
+  display: flex;
+}
+
+.clusterHeader {
+  color: var(--headerTextColor);
+}
+
+.clusterHamburger {
+  color: var(--headerTextColor);
+}

@@ -1,11 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "./scss/Layout.module.css";
-import utilStyles from "../styles/utils.module.scss";
-import Link from "next/link";
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from './scss/Layout.module.scss';
+import utilStyles from '../styles/utils.module.scss';
+import Link from 'next/link';
 
-const name = "Taro Kobayashi";
-export const siteTitle = "Trelloppoi";
+const name = 'Taro Kobayashi';
+export const siteTitle = 'Trelloppoi';
 
 export default function Layout({ children, home }) {
   return (
@@ -25,48 +25,17 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={144}
-                  width={144}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.hadingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>Back to home</a>
-          </Link>
+      <header className={`${styles.header} ${styles.clusterHeader}`}>
+        <h1>TRELLOPPOI <span> - トレロっぽい -</span></h1>
+        <div className={`${styles.cluster} ${styles.clusterHamburger}`}>
+          <div>ABOUT</div>
+          <div className={styles.hamburger}>三</div>
         </div>
-      )}
+      </header>
+      {/* MAIN CONTENTS */}
+      <div>
+        <main>{children}</main>
+      </div>
     </div>
   );
 }
