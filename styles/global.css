@@ -7,20 +7,20 @@
   }
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
 * {
+  font-family: 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-family: 'Exo 2', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 a {
@@ -30,9 +30,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }

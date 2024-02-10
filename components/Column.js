@@ -25,7 +25,6 @@ export default function Column({
             className={styles.title}
             placeholder="リストのタイトルを入力..."
             defaultValue={column.title}
-            rows="1"
           />
           <Droppable droppableId={column.id} type="ticket">
             {(provided) => (
